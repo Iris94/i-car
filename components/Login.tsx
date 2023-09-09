@@ -75,7 +75,7 @@ export default function Login({ switchToRegister }: any) {
         </form>
       </div>
       <div className="w-2/3 h-2/5 flex justify-center items-center gap-2">
-        <div>Don't have an account?</div>
+        <div>Don&apos;t have an account?</div>
         <button
           className="w-fit h-fit rounded-sm bg-lightColor text-white p-2 hover:bg-darkColor"
           onClick={handleSwitch}
