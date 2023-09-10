@@ -39,7 +39,7 @@ export default function Login({ switchToRegister }: any) {
         setTimeout(() => {
           setSuccess('');
           router.push('/dashboard')
-        }, 2000);
+        }, 1500);
 
       } else {
         const data = await response.json();
