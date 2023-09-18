@@ -1,21 +1,15 @@
 'use client'
-
+import { useState } from "react"
+import { CheckCar, UnCheckCar } from "@/components"
 
 export default function Dashboard () {
+    const [carCheck, setCarCheck] = useState(false)
 
     return (
-        <div className="flex flex-col lg:flex-row w-screen h-screen">
-            <div 
-            className="bg-backgroundColor w-full h-1/2 lg:w-1/2 lg:h-full order-2 lg:order-1"
-            >
-
-            </div>
-            <div
-            className="bg-lightColor w-full h-1/2 lg:w-1/2 lg:h-full order-1 lg:order-2"
-            >
-                <div></div>
-                <div></div>
-            </div>
-        </div>
+        <>
+        {
+            !carCheck ? <CheckCar /> : <UnCheckCar />
+        }
+        </>
     )
 }
