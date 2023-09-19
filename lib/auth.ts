@@ -2,6 +2,8 @@ import { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import connectMongoDB from './mongodb'
 import User from '@/models/user'
+import GoogleProvider from "next-auth/providers/google";
+
 
 export const authConfig:NextAuthOptions = {
     providers: [
@@ -38,6 +40,11 @@ export const authConfig:NextAuthOptions = {
                 }
 
             },
-        })
+        }),
+
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
+          })
     ]
 }
